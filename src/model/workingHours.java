@@ -8,16 +8,16 @@ package model;
  *
  * @author zurit
  */
-public class workingHours {
+public class WorkingHours {
 
     private String day;
-    private time checkInTime;
-    private time checkOutTime;
+    private Time checkInTime;
+    private Time checkOutTime;
 
-    public workingHours() {
+    public WorkingHours() {
     }
 
-    public workingHours(String day, time checkInTime, time checkOutTime) {
+    public WorkingHours(String day, Time checkInTime, Time checkOutTime) {
         this.day = day;
         this.checkInTime = checkInTime;
         this.checkOutTime = checkOutTime;
@@ -31,19 +31,19 @@ public class workingHours {
         this.day = day;
     }
 
-    public time getCheckInTime() {
+    public Time getCheckInTime() {
         return checkInTime;
     }
 
-    public void setCheckInTime(time checkInTime) {
+    public void setCheckInTime(Time checkInTime) {
         this.checkInTime = checkInTime;
     }
 
-    public time getCheckOutTime() {
+    public Time getCheckOutTime() {
         return checkOutTime;
     }
 
-    public void setCheckOutTime(time checkOutTime) {
+    public void setCheckOutTime(Time checkOutTime) {
         this.checkOutTime = checkOutTime;
     }
 

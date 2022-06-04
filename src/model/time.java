@@ -8,15 +8,15 @@ package model;
  *
  * @author zurit
  */
-public class time {
+public class Time {
 
     private int hour;
     private int minute;
 
-    public time() {
+    public Time() {
     }
 
-    public time(int hour, int minute) {
+    public Time(int hour, int minute) {
         this.hour = hour;
         this.minute = minute;
     }

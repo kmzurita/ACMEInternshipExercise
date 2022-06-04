@@ -10,16 +10,16 @@ import java.util.ArrayList;
  *
  * @author zurit
  */
-public class employeeSchedule {
+public class EmployeeSchedule {
 
     private String employeeName;
-    private ArrayList<workingHours> daysWorked;
+    private ArrayList<WorkingHours> daysWorked;
 
-    public employeeSchedule() {
-        this.daysWorked = new ArrayList<workingHours>();
+    public EmployeeSchedule() {
+        this.daysWorked = new ArrayList<WorkingHours>();
     }
 
-    public employeeSchedule(String employeeName, ArrayList<workingHours> daysWorked) {
+    public EmployeeSchedule(String employeeName, ArrayList<WorkingHours> daysWorked) {
         this.employeeName = employeeName;
         this.daysWorked = daysWorked;
     }
@@ -32,18 +32,18 @@ public class employeeSchedule {
         this.employeeName = employeeName;
     }
 
-    public ArrayList<workingHours> getDaysWorked() {
+    public ArrayList<WorkingHours> getDaysWorked() {
         return daysWorked;
     }
 
-    public void setDaysWorked(ArrayList<workingHours> daysWorked) {
+    public void setDaysWorked(ArrayList<WorkingHours> daysWorked) {
         this.daysWorked = daysWorked;
     }
 
     @Override
     public String toString() {
         String result = "";
-        for (workingHours i : this.daysWorked) {
+        for (WorkingHours i : this.daysWorked) {
             result += i.toString() + " ";
         }
         return employeeName + "=" + result;

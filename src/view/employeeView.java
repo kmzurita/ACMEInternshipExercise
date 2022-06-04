@@ -4,25 +4,25 @@
  */
 package view;
 
-import controller.employeeController;
-import controller.fileController;
+import controller.EmployeeController;
+import controller.FileController;
 import java.io.IOException;
 import java.util.ArrayList;
-import model.employeeSchedule;
+import model.EmployeeSchedule;
 
 /**
  *
  * @author zurit
  */
-public class employeeView {
+public class EmployeeView {
 
-    public employeeView() {
+    public EmployeeView() {
     }
 
     public void showResults() throws IOException {
-        fileController fC = new fileController();
-        employeeController eC = new employeeController();
-        ArrayList<employeeSchedule> employees = new ArrayList<employeeSchedule>();
+        FileController fC = new FileController();
+        EmployeeController eC = new EmployeeController();
+        ArrayList<EmployeeSchedule> employees = new ArrayList<EmployeeSchedule>();
         employees = fC.readFile();
         System.out.println(eC.totalComparison(employees));
     }

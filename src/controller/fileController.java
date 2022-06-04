@@ -9,27 +9,27 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import model.employeeSchedule;
-import model.time;
-import model.workingHours;
+import model.EmployeeSchedule;
+import model.Time;
+import model.WorkingHours;
 
 /**
  *
  * @author zurit
  */
-public class fileController {
+public class FileController {
 
-    public fileController() {
+    public FileController() {
     }
 
-    public ArrayList<employeeSchedule> readFile() throws FileNotFoundException, IOException {
-        ArrayList<employeeSchedule> employees = new ArrayList<employeeSchedule>();
+    public ArrayList<EmployeeSchedule> readFile() throws FileNotFoundException, IOException {
+        ArrayList<EmployeeSchedule> employees = new ArrayList<EmployeeSchedule>();
         BufferedReader br = new BufferedReader(new FileReader("file.txt"));
         try {
             String line = br.readLine();
             while (line != null) {
                 String[] eSVector = line.split("=");
-                employeeSchedule eS = new employeeSchedule(eSVector[0], separateDays(eSVector[1].replaceAll("\\s", "")));
+                EmployeeSchedule eS = new EmployeeSchedule(eSVector[0], separateDays(eSVector[1].replaceAll("\\s", "")));
                 employees.add(eS);
                 line = br.readLine();
             }
@@ -41,12 +41,12 @@ public class fileController {
         return employees;
     }
 
-    public ArrayList<workingHours> separateDays(String workingHours) {
-        ArrayList<workingHours> wHArray = new ArrayList<workingHours>();
+    public ArrayList<WorkingHours> separateDays(String workingHours) {
+        ArrayList<WorkingHours> wHArray = new ArrayList<WorkingHours>();
         String[] wHVector = workingHours.split(",");
         for (String i : wHVector) {
-            time checkIn = new time();
-            time checkOut = new time();
+            Time checkIn = new Time();
+            Time checkOut = new Time();
             try {
                 checkIn.setHour(Integer.parseInt(i.substring(2, 4)));
                 checkIn.setMinute(Integer.parseInt(i.substring(5, 7)));
@@ -56,7 +56,7 @@ public class fileController {
             } catch (NumberFormatException nfe) {
                 System.out.println("Error en formato de numeros");
             }
-            workingHours wH = new workingHours(i.substring(0, 2), checkIn, checkOut);
+            WorkingHours wH = new WorkingHours(i.substring(0, 2), checkIn, checkOut);
             wHArray.add(wH);
         }
         return wHArray;

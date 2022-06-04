@@ -5,19 +5,19 @@
 package controller;
 
 import java.util.ArrayList;
-import model.employeeSchedule;
-import model.workingHours;
+import model.EmployeeSchedule;
+import model.WorkingHours;
 
 /**
  *
  * @author zurit
  */
-public class employeeController {
+public class EmployeeController {
 
-    public employeeController() {
+    public EmployeeController() {
     }
 
-    public String totalComparison(ArrayList<employeeSchedule> employees) {
+    public String totalComparison(ArrayList<EmployeeSchedule> employees) {
         String comparisonResult = "";
         for (int i = 0; i < employees.size() - 1; i++) {
             for (int j = i + 1; j < employees.size(); j++) {
@@ -29,10 +29,10 @@ public class employeeController {
         return comparisonResult;
     }
 
-    public int employeesComparison(employeeSchedule eS1, employeeSchedule eS2) {
+    public int employeesComparison(EmployeeSchedule eS1, EmployeeSchedule eS2) {
         int count = 0;
-        for (workingHours i : eS1.getDaysWorked()) {
-            for (workingHours j : eS2.getDaysWorked()) {
+        for (WorkingHours i : eS1.getDaysWorked()) {
+            for (WorkingHours j : eS2.getDaysWorked()) {
                 if (i.getDay().equals(j.getDay())) {
                     if (i.getCheckInTime().getHour() >= j.getCheckInTime().getHour() && i.getCheckInTime().getHour() <= j.getCheckOutTime().getHour()) {
                         count += 1;
