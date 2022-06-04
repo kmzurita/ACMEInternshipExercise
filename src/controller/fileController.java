@@ -39,6 +39,7 @@ public class FileController {
             br.close();
         }
         return employees;
+
     }
 
     public ArrayList<WorkingHours> separateDays(String workingHours) {
@@ -48,15 +49,15 @@ public class FileController {
             Time checkIn = new Time();
             Time checkOut = new Time();
             try {
-                checkIn.setHour(Integer.parseInt(i.substring(2, 4)));
-                checkIn.setMinute(Integer.parseInt(i.substring(5, 7)));
-                checkOut.setHour(Integer.parseInt(i.substring(8, 10)));
-                checkOut.setMinute(Integer.parseInt(i.substring(11, 13)));
+                checkIn.setHour(Integer.parseInt(i.replaceAll("([ A-Za-z])", "").split("-")[0].split(":")[0]));
+                checkIn.setMinute(Integer.parseInt(i.replaceAll("([ A-Za-z])", "").split("-")[0].split(":")[1]));
+                checkOut.setHour(Integer.parseInt(i.replaceAll("([ A-Za-z])", "").split("-")[1].split(":")[0]));
+                checkOut.setMinute(Integer.parseInt(i.replaceAll("([ A-Za-z])", "").split("-")[1].split(":")[1]));
 
             } catch (NumberFormatException nfe) {
                 System.out.println("Error en formato de numeros");
             }
-            WorkingHours wH = new WorkingHours(i.substring(0, 2), checkIn, checkOut);
+            WorkingHours wH = new WorkingHours(i.replaceAll("([^A-Za-z])", ""), checkIn, checkOut);
             wHArray.add(wH);
         }
         return wHArray;

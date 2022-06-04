@@ -15,6 +15,7 @@ import model.WorkingHours;
 public class EmployeeController {
 
     public EmployeeController() {
+
     }
 
     public String totalComparison(ArrayList<EmployeeSchedule> employees) {
