@@ -91,7 +91,7 @@ After getting Apache Netbeans successfully installed in your computer you just h
   6. Once the project was open run it by clicking the green arrow at the top of the Netbeans IDE.
 
 ---
-### **How to run unit tests**
+### **How to run the unit tests**
 ---
 First you will need to have open the project following the instrunctions above, then:
 
