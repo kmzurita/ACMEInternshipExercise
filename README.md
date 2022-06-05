@@ -45,7 +45,7 @@ As per given in the exercise instructions, every single line has the information
 
 With this we can make an algorithm that read the data from the .txt file, processes and stores it in an arraylist for our use, ready for the next step.
 
-The next step is comparing each employee and their working hours, we can do this in Java iterating the arraylist two time using a bubble algorithm to compare each , but we need to ensure that each possible combination is only done 1 time. After this all that is left is to show the number of coincidences on the screen.  
+The next step is comparing each employee and their working hours, we can do this in Java iterating the arraylist two time using a bubble algorithm to compare each, but we need to ensure that each possible combination is only done 1 time. After this all that is left is to show the number of coincidences on the screen.  
 
 ---
 ### **Architecture**
@@ -61,18 +61,18 @@ The approach used in this exercise was a pattern search on the data given, after
 ---
 ### **Methodology**
 ---
-The methodology used for this exercise was an objected-oriented paradigm paired with a MVC architecure. First we have 3 objects that work like models, a model for the time with hours and minutes, another one for the worked hours which has the name of the day and the check in and check out times, and the last one for the entire employee schedule, which has the employee's name and an arraylist of the worked hours, so it can have has many hours registered as we desire.
+The methodology used for this exercise was an objected-oriented paradigm paired with a MVC architecture. First, we have 3 objects that work like models, a model for the time with hours and minutes, another one for the worked hours which has the name of the day and the check in and check out times, and the last one for the entire employee schedule, which has the employee's name and an arraylist of the worked hours, so it can have has many hours registered as we desire.
 
-Second we have 2 controllers, one for the reading and processing of the file and its data, and another one for the employees and the schedule comparison, and finally the view which calls the employee controller and shows the results to the user. The comparison algorithm uses the data of each employee, specifically their worked hours, it read the name of the day from both employees and if it is a match it checks the check in and check out time from both. If they are within range of each other the count will go up by one following this method:
+Second, we have 2 controllers, one for the reading and processing of the file and its data, and another one for the employees and the schedule comparison, and finally the view which calls the employee controller and shows the results to the user. The comparison algorithm uses the data of each employee, specifically their worked hours, it read the name of the day from both employees and if it is a match, it checks the check in and check out time from both. If they are within range of each other the count will go up by one following this method:
 
   * If the check in hour of the 1st employee is both **greater or equal** than the check in hour of the 2nd employee and **lower or equal** than the check out hour of the 2nd employee:
     * Count + 1 
   * Else if the check in hour of the 2nd employee is both **greater or equal** than the check in hour of the 1st employee and **lower or equal** than the check out hour of the 1st employee:
     * Count + 1
   * Else if the check in hour of the 1st employee is **equal** to the check out hour of the 2nd employee or the check in hour of the 2nd employee is **equal** to the check out hour of the 1st employee:
-    * If the check in minutes of the 1st employee are **lower or equal** than the check out minutes if the 2nd employee:
+    * If the check in minutes of the 1st employee is **lower or equal** than the check out minutes if the 2nd employee:
       * Count + 1
-    * Else if the check in minutes of the 2nd employee are **lower or equal** than the check out minutes if the 1st employee:
+    * Else if the check in minutes of the 2nd employee is **lower or equal** than the check out minutes if the 1st employee:
       * Count + 1
 
 With these conditions we can catch any coincidence between two employees at work on the same day in the same time range and get the results we want.
@@ -84,7 +84,7 @@ First you will need to download the Netbeans IDE and JDK (Java Development Kit),
 
   [Apache Netbeans](https://netbeans.apache.org/download/index.html "Apache Netbeans")
 
-After getting Apache Netbeans successfully installed in your computer you just have to follow this steps:
+After getting Apache Netbeans successfully installed in your computer you just have to follow these steps:
 
   1. Download the github repository.
   2. Open Apache Netbeans IDE.
@@ -96,7 +96,7 @@ After getting Apache Netbeans successfully installed in your computer you just h
 ---
 ### **How to run the unit tests**
 ---
-First you will need to have open the project following the instrunctions above, then:
+First you will need to have open the project following the instructions above, then:
 
   1. Search the folder named **Test Package** inside the open project in the Apache Netbeans IDE in the **Projects** tab.
   2. Open the **controller** package.
