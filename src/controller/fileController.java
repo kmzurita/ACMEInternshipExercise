@@ -35,6 +35,7 @@ public class FileController {
             }
         } catch (FileNotFoundException fnf) {
             System.out.println("Archivo no encontrado");
+            System.out.println("Error: "+fnf);
         } finally {
             br.close();
         }
@@ -56,6 +57,7 @@ public class FileController {
 
             } catch (NumberFormatException nfe) {
                 System.out.println("Error en formato de numeros");
+                continue;
             }
             WorkingHours wH = new WorkingHours(i.replaceAll("([^A-Za-z])", ""), checkIn, checkOut);
             wHArray.add(wH);
