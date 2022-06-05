@@ -51,7 +51,7 @@ The next step is comparing each employee and their working hours, we can do this
 ### **Architecture**
 For this exercise the architecture used was MVC (Model-View-Controller), with this we can separate all functionalities to make a cleaner code.
 
-![Architecture](https://github.com/kmzurita/ACME_Internship_Exercise/blob/main/images/Architecture.jpeg)
+![Architecture](https://github.com/kmzurita/ACME_Internship_Exercise/blob/main/project/images/Architecture.jpeg)
 
 ---
 ### **Approach**
