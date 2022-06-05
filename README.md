@@ -35,7 +35,7 @@ As per given in the exercise instructions, every single line has the information
 
   1. The employee's name.
   2. An equal sign (=).
-  3. Two first letter of the day (MO,TU,WE,TH,FR,SA,SU).
+  3. Two first letter of the day (MO, TU, WE, TH, FR, SA, SU).
   4. Check in Time, separating hours and minutes with two points (hh:mm).
   5. A dash.
   6. Check out Time, separating hours and minutes with two points (hh:mm).
