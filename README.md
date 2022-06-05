@@ -31,6 +31,7 @@ RENE-ASTRID: 3
 
 ---
 ### **Solution**
+---
 As per given in the exercise instructions, every single line has the information about one employee and his worked hours through the week, following this pattern:
 
   1. The employee's name.
@@ -54,10 +55,12 @@ For this exercise the architecture used was MVC (Model-View-Controller), with th
 
 ---
 ### **Approach**
+---
 The approach used in this exercise was a pattern search on the data given, after founding it we can split the data and make it into smaller strings that can be converted into an object to store it and later be processed.
 
 ---
 ### **Methodology**
+---
 The methodology used for this exercise was an objected-oriented paradigm paired with a MVC architecure. First we have 3 objects that work like models, a model for the time with hours and minutes, another one for the worked hours which has the name of the day and the check in and check out times, and the last one for the entire employee schedule, which has the employee's name and an arraylist of the worked hours, so it can have has many hours registered as we desire.
 
 Second we have 2 controllers, one for the reading and processing of the file and its data, and another one for the employees and the schedule comparison, and finally the view which calls the employee controller and shows the results to the user. The comparison algorithm uses the data of each employee, specifically their worked hours, it read the name of the day from both employees and if it is a match it checks the check in and check out time from both. If they are within range of each other the count will go up by one following this method:
