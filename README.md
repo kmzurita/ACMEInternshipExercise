@@ -31,11 +31,12 @@ RENE-ASTRID: 3
 
 ---
 ### **Solution**
+---
 As per given in the exercise instructions, every single line has the information about one employee and his worked hours through the week, following this pattern:
 
   1. The employee's name.
   2. An equal sign (=).
-  3. Two first letter of the day (MO,TU,WE,TH,FR,SA,SU).
+  3. Two first letter of the day (MO, TU, WE, TH, FR, SA, SU).
   4. Check in Time, separating hours and minutes with two points (hh:mm).
   5. A dash.
   6. Check out Time, separating hours and minutes with two points (hh:mm).
@@ -50,13 +51,17 @@ The next step is comparing each employee and their working hours, we can do this
 ### **Architecture**
 For this exercise the architecture used was MVC (Model-View-Controller), with this we can separate all functionalities to make a cleaner code.
 
+![Architecture](https://github.com/kmzurita/ACME_Internship_Exercise/blob/main/images/Architecture.jpeg)
+
 ---
 ### **Approach**
-First 
+---
+The approach used in this exercise was a pattern search on the data given, after founding it we can split the data and make it into smaller strings that can be converted into an object to store it and later be processed.
 
 ---
 ### **Methodology**
-The methodology used for this exercise was an objected-oriented paradigm paired with a MVC architecure. First we have 3 objects that work like models, a model for the time with hours and minutes, another one for the worked hours which has the name of the day and the check in and check out times, and the last one for the entire employee schedule, which has the name and an arraylist of the worked hours, so it can have has many hours registered as we desire.
+---
+The methodology used for this exercise was an objected-oriented paradigm paired with a MVC architecure. First we have 3 objects that work like models, a model for the time with hours and minutes, another one for the worked hours which has the name of the day and the check in and check out times, and the last one for the entire employee schedule, which has the employee's name and an arraylist of the worked hours, so it can have has many hours registered as we desire.
 
 Second we have 2 controllers, one for the reading and processing of the file and its data, and another one for the employees and the schedule comparison, and finally the view which calls the employee controller and shows the results to the user. The comparison algorithm uses the data of each employee, specifically their worked hours, it read the name of the day from both employees and if it is a match it checks the check in and check out time from both. If they are within range of each other the count will go up by one following this method:
 
@@ -89,7 +94,7 @@ After getting Apache Netbeans successfully installed in your computer you just h
   6. Once the project was open run it by clicking the green arrow at the top of the Netbeans IDE.
 
 ---
-### **How to run unit tests**
+### **How to run the unit tests**
 ---
 First you will need to have open the project following the instrunctions above, then:
 
